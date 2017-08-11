@@ -2,16 +2,13 @@ html{
   margin: 0, auto;
   height: 100%;
 }
-body {
-  min-width: 100%;
-}
 #marginFix{
-  margin-top: 5%;
+  margin-top: 3%;
 }
 main{
   width: 80%;
   margin:0 auto;
-  height:580px;
+  height:620px;
   background-color: grey;
   border-radius: 25px;
 }
@@ -27,4 +24,66 @@ main{
   margin:1px;
   background-color: white;
   float:left;
+}
+#colors{
+  width:100%;
+  clear:left;
+  position: relative;
+  top:35px;
+}
+#black{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 80px;
+  border-radius: 35px;
+  background-color: black;
+}
+#white{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 35px;
+  background-color: white;
+}
+#c1{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 80px;
+  border-radius: 35px;
+  background-color: #FF0000;
+}
+#c2{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 35px;
+  background-color: #FF4000;
+}
+#c3{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 35px;
+  background-color: #FFE50D;
+}
+#c4{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 35px;
+  background-color: #2BE500;
+}
+#c5{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 35px;
+  background-color: #0019FF;
 }
