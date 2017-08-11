@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let aPixel = document.getElementsByClassName('aPixel')
   let pixelBox = document.getElementById('pixelBox')
-  let colorBox = document.getElementById('colorBox')
+  let main = document.getElementsByTagName('main')[0]
+  let theColors = document.getElementById('colorBox')
+  let divC = document.getElementsByClassName('colors')
+  let divP = document.getElementsByClassName('aPixel')
+  let brushColor = '';
 
   for (var i = 1; i <= 3115; i++) {
     let newPixel = document.createElement('div')
@@ -11,10 +15,16 @@ document.addEventListener('DOMContentLoaded', function(){
     newPixel.setAttribute('class', 'aPixel')
   }
 
-  colorBox.addEventListener('click', function(event){
-    var x = window.getComputedStyle(event.target).backgroundColor;
+  main.addEventListener('click', function(event){
 
-    console.log(x)
+      if(event.target.className === divC[0].className) {
+        brushColor = window.getComputedStyle(event.target).backgroundColor
+      }
+      else if(event.target.className === divP[0].className) {
+        console.log("SET THE PIXEL COLOR: "+brushColor);
+        event.target.style.backgroundColor = brushColor
+
+      }
 
   });
 
