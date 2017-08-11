@@ -25,7 +25,7 @@ main{
   background-color: white;
   float:left;
 }
-#colors{
+#colorBox{
   width:100%;
   clear:left;
   position: relative;
