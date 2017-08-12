@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
   let whiteColor = window.getComputedStyle(eraser).backgroundColor
 
     //This creates the pixels
-  for (var i = 1; i <= 3115; i++) {
+  for (var i = 1; i <= 3149; i++) {
     let newPixel = document.createElement('div')
     pixelBox.appendChild(newPixel)
     newPixel.setAttribute('class', 'aPixel')

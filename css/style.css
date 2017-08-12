@@ -14,9 +14,10 @@ main{
   height:620px;
   background-color: #C0B3AB;
   border-radius: 25px;
+  box-shadow: 8px 8px 5px rgba(0,0,0,0.3);
 }
 #pixelBox{
-  width:85%;
+  width:90%;
   margin-left: 5.5%;
   position: relative;
   top:25px;
@@ -89,4 +90,20 @@ main{
   margin-left: 20px;
   border-radius: 35px;
   background-color: #0019FF;
+}
+#reset{
+  width:65px;
+  height:65px;
+  display: inline-block;
+  margin-left: 68px;
+  border-radius: 35px;
+  background-color: #C0B3AB;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  position: relative;
+  bottom: 33px;
+}
+p{
+  position: relative;
+  top:8px;
+  margin-left: 13px;
 }
