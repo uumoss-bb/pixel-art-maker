@@ -91,7 +91,7 @@ main{
   border-radius: 35px;
   background-color: #0019FF;
 }
-#reset{
+.reset{
   width:65px;
   height:65px;
   display: inline-block;
@@ -106,4 +106,5 @@ p{
   position: relative;
   top:8px;
   margin-left: 13px;
+  color:rgb(105,105,105);
 }

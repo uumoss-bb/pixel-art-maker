@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function(){
   let pixelBox = document.getElementById('pixelBox')
   let main = document.getElementsByTagName('main')[0]
   let theColors = document.getElementById('colorBox')
-  let divC = document.getElementsByClassName('colors')
-  let divP = document.getElementsByClassName('aPixel')
+  // let divC = document.getElementsByClassName('colors')
+  // let divP = document.getElementsByClassName('aPixel')
   let brushColor = '';
   let eraser = document.getElementById('white')
   let whiteColor = window.getComputedStyle(eraser).backgroundColor
+  let reset = document.getElementsByClassName('reset')
 
     //This creates the pixels
   for (var i = 1; i <= 3149; i++) {
@@ -49,9 +50,23 @@ document.addEventListener('DOMContentLoaded', function(){
   theColors.addEventListener('click', function(event){
 
     brushColor = window.getComputedStyle(event.target).backgroundColor
-    console.log(brushColor)
+    for (var x = 0; x <= 3149; x++) {
+      if(event.target.className === reset[0].className){
+        console.log('check')
+        let pixX = aPixel[x]
+        pixX.style.backgroundColor = whiteColor
+        pixX.style.borderColor = '#C0B3AB'
+      }
+    }
 
   })
+  // console.log(reset)
+  //
+  // reset.addEventListener('click', function(event){
+  //   window.getComputedStyle(aPixel).backgroundColor = whiteColor
+  //   window.getComputedStyle(aPixel).borderColor = '#C0B3AB'
+  // })
+
       //this is for if you have one click event
 // if(event.target.className === divC[0].className) {
 //   brushColor = window.getComputedStyle(event.target).backgroundColor
