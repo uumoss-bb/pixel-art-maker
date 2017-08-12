@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
     pixelBox.appendChild(newPixel)
     newPixel.setAttribute('class', 'aPixel')
   }
-
-  main.addEventListener('click', function(event){
+// I need to make two functions for two different events
+  main.addEventListener('mouseover', function(event){
 
       if(event.target.className === divC[0].className) {
         brushColor = window.getComputedStyle(event.target).backgroundColor
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
       else if(event.target.className === divP[0].className) {
         console.log("SET THE PIXEL COLOR: "+brushColor);
         event.target.style.backgroundColor = brushColor
+
 
       }
 
