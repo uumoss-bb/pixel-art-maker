@@ -14,28 +14,37 @@ document.addEventListener('DOMContentLoaded', function(){
     let newPixel = document.createElement('div')
     pixelBox.appendChild(newPixel)
     newPixel.setAttribute('class', 'aPixel')
+    newPixel.addEventListener('mouseenter', paint)
+    newPixel.addEventListener('click', clickPaint)
   }
         //This applys the color
-  pixelBox.addEventListener('mousedown', function(event){
+  let mouseState = false
 
-    event.target.style.backgroundColor = brushColor
+  function clickPaint() {
+    event.target.style.backgroundColor = brushColor || 'white';
+  }
+  function paint(){
+      pixelBox.addEventListener('mousedown', function(event){
 
-    // pixelBox.addEventListener('mouseup', function(event){
-    //
-    //   event.target.reomoveAttribute("background-color")
-    //
-    // })
-  })
-          //Im tryig to remove the backgroundColor on the even.target
-          //its not working tho.
-          
-  // pixelBox.addEventListener('mouseup', function(event){
-  //   event.target.reomoveAttribute("backgroundColor")
-  // })
+        mouseState = true
+
+      })
+
+      pixelBox.addEventListener('mouseup', function(event){
+
+        mouseState = false
+
+      })
+      if(mouseState === true){
+        event.target.style.backgroundColor = brushColor || 'white'
+      }
+  }
+
       //This gets the color
   theColors.addEventListener('click', function(event){
 
     brushColor = window.getComputedStyle(event.target).backgroundColor
+    console.log(brushColor)
 
   })
       //this is for if you have one click event
@@ -46,4 +55,4 @@ document.addEventListener('DOMContentLoaded', function(){
 //   console.log("SET THE PIXEL COLOR: "+brushColor);
 //   event.target.style.backgroundColor = brushColor
 // }
-})
+});
