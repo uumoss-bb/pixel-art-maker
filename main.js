@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function(){
   let divC = document.getElementsByClassName('colors')
   let divP = document.getElementsByClassName('aPixel')
   let brushColor = '';
+  let eraser = document.getElementById('white')
+  let whiteColor = window.getComputedStyle(eraser).backgroundColor
 
     //This creates the pixels
   for (var i = 1; i <= 3115; i++) {
@@ -37,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function(){
       })
       if(mouseState === true){
         event.target.style.backgroundColor = brushColor || 'white'
-      }
+        event.target.style.borderColor = brushColor || 'white'
+        if(brushColor === whiteColor)
+        event.target.style.borderColor = '#C0B3AB'
+        }
   }
 
       //This gets the color

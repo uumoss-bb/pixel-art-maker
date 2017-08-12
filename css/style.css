@@ -2,6 +2,9 @@ html{
   margin: 0, auto;
   height: 100%;
 }
+body{
+  background-color: #54678C;
+}
 #marginFix{
   margin-top: 3%;
 }
@@ -9,20 +12,20 @@ main{
   width: 80%;
   margin:0 auto;
   height:620px;
-  background-color: grey;
+  background-color: #C0B3AB;
   border-radius: 25px;
 }
 #pixelBox{
-  width:90%;
+  width:85%;
   margin-left: 5.5%;
   position: relative;
   top:25px;
 }
 .aPixel{
-  width:10px;
-  height:10px;
-  margin:1px;
+  width:1.1%;
+  padding-bottom:1.1%;
   background-color: white;
+  border: 1px solid #C0B3AB;
   float:left;
 }
 #colorBox{
